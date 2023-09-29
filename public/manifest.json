@@ -6,5 +6,11 @@
     "default_popup": "index.html"
   },
   "permissions": ["scripting"],
-  "host_permissions": ["http://*/*", "https://*/*"]
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "js": ["./scripts/button.script.js"],
+      "matches": ["https://www.imdb.com/*", "https://m.imdb.com/*"]
+    }
+  ]
 }
